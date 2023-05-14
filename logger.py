@@ -59,7 +59,7 @@ class Logger:
 
             self.logger.addHandler(console_handler)
 
-    def debug(self, message, ex: Exception=None):
+    def debug(self, message: str, ex: Exception=None):
 
         function_name = self.function_name_from_trace()
 
@@ -78,7 +78,7 @@ class Logger:
             self.logger.debug(message)
 
 
-    def info(self, message, ex: Exception=None):
+    def info(self, message: str, ex: Exception=None):
 
         function_name = self.function_name_from_trace()
 
@@ -96,7 +96,7 @@ class Logger:
 
             self.logger.info(message)
 
-    def warning(self, message, ex: Exception=None):
+    def warning(self, message: str, ex: Exception=None):
 
         function_name = self.function_name_from_trace()
 
@@ -109,12 +109,12 @@ class Logger:
             self.logger.warning(message)
 
         else:
- 
+
             message = f"{function_name}: {message}"
 
             self.logger.warning(message)
 
-    def error(self, message, ex: Exception=None):
+    def error(self, message: str, ex: Exception=None):
 
         function_name = self.function_name_from_trace()
 
